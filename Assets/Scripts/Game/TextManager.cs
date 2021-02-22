@@ -453,7 +453,7 @@ namespace DaggerfallWorkshop.Game
         {
             // Get all text files in target path
             Debug.Log("TextManager enumerating text databases.");
-            string path = Path.Combine(Application.streamingAssetsPath, textFolderName);
+            string path = Path.Combine(Paths.StreamingAssetsPath, textFolderName);
             string[] files = Directory.GetFiles(path, "*.txt");
 
             // Attempt to read each file as a table with a text schema

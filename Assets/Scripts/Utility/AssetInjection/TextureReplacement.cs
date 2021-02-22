@@ -88,7 +88,7 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
         const string extension = ".png";
 
         // Paths
-        static readonly string texturesPath = Path.Combine(Application.streamingAssetsPath, "Textures");
+        static readonly string texturesPath = Path.Combine(Paths.StreamingAssetsPath, "Textures");
         static readonly string imgPath = Path.Combine(texturesPath, "Img");
         static readonly string cifRciPath = Path.Combine(texturesPath, "CifRci");
 

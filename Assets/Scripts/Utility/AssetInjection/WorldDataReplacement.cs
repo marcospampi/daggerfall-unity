@@ -44,7 +44,7 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
 
         const int noReplacementIndicator = -1;
         const string worldData = "WorldData";
-        static readonly string worldDataPath = Path.Combine(Application.streamingAssetsPath, worldData);
+        static readonly string worldDataPath = Path.Combine(Paths.StreamingAssetsPath, worldData);
 
         // No replacement found indicator structures.
         static readonly DFRegion noReplacementRegion = new DFRegion() { LocationCount = 0 };    // Use 0 as it's a uint, and loc count should always be > 0

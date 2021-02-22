@@ -113,7 +113,7 @@ namespace DaggerfallWorkshop.Game.Utility.ModSupport
         /// </summary>
         public static string EditorModsDirectory
         {
-            get { return Application.dataPath + "/Game/Mods"; }
+            get { return Paths.DataPath + "/Game/Mods"; }
         }
 #endif
 
@@ -124,7 +124,7 @@ namespace DaggerfallWorkshop.Game.Utility.ModSupport
         void Awake()
         {
             if (string.IsNullOrEmpty(ModDirectory))
-                ModDirectory = Path.Combine(Application.streamingAssetsPath, "Mods");
+                ModDirectory = Path.Combine(Paths.StreamingAssetsPath, "Mods");
         }
 
         void Start()

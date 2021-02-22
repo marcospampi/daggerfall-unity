@@ -59,10 +59,10 @@ namespace DaggerfallWorkshop
                 if (string.IsNullOrEmpty(persistentPath))
                 {
 #if UNITY_EDITOR && SEPARATE_DEV_PERSISTENT_PATH
-                    persistentPath = String.Concat(Application.persistentDataPath, ".devenv");
+                    persistentPath = String.Concat(Paths.PersistentDataPath, ".devenv");
                     Directory.CreateDirectory(persistentPath);
 #else
-                    persistentPath = Application.persistentDataPath;
+                    persistentPath = Paths.PersistentDataPath;
 #endif
                 }
                 return persistentPath;

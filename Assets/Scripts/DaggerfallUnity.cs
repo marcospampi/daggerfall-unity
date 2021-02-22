@@ -366,10 +366,10 @@ namespace DaggerfallWorkshop
                     LogMessage("Daggerfall path not found.", true);
             }
 
-            // Otherwise, look for arena2 folder in Application.dataPath at runtime
+            // Otherwise, look for arena2 folder in Paths.DataPath at runtime
             if (Application.isPlaying && !found)
             {
-                path = TestArena2Exists(Application.dataPath);
+                path = TestArena2Exists(Paths.DataPath);
                 if (!string.IsNullOrEmpty(path))
                     found = true;
             }

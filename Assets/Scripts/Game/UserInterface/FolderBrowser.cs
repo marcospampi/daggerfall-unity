@@ -188,6 +188,9 @@ namespace DaggerfallWorkshop.Game.UserInterface
 
             driveList.SelectedIndex = 0;
             currentPath = drives[driveList.SelectedIndex];
+            #if PLATFORM_ANDROID
+                currentPath = Paths.StoragePath;
+            #endif
         }
 
         void RefreshFolders()

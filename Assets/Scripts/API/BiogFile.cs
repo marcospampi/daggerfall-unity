@@ -39,7 +39,7 @@ namespace DaggerfallConnect.Arena2
 
         public static string BIOGSourceFolder
         {
-            get { return Path.Combine(Application.streamingAssetsPath, biogSourceFolderName); }
+            get { return Path.Combine(Paths.StreamingAssetsPath, biogSourceFolderName); }
         }
 
         public BiogFile(CharacterDocument characterDocument)

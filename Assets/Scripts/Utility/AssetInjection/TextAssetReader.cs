@@ -37,7 +37,7 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
             if (relativePath == null)
                 throw new ArgumentNullException("relativePath");
 
-            string path = Path.Combine(Application.streamingAssetsPath, relativePath);
+            string path = Path.Combine(Paths.StreamingAssetsPath, relativePath);
             if (File.Exists(path))
             {
                 content = File.ReadAllText(path);
@@ -89,7 +89,7 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
 
             var content = new List<string>();
 
-            string dirPath = Path.Combine(Application.streamingAssetsPath, relativeDirectory);
+            string dirPath = Path.Combine(Paths.StreamingAssetsPath, relativeDirectory);
             if (Directory.Exists(dirPath))
             {
                 foreach (string path in extension != null ? Directory.GetFiles(dirPath, string.Format("*.{0}", extension)) : Directory.GetFiles(dirPath))

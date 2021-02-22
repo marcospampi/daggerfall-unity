@@ -762,21 +762,28 @@ namespace DaggerfallWorkshop.Game.UserInterfaceWindows
 
         private void ResolutionTestOrConfirmButton_OnMouseClick(BaseScreenComponent sender, Vector2 position)
         {
-            Resolution selectedResolution = availableResolutions[resolutionList.SelectedIndex];
-            if (!resolutionConfirmed)
+            try // will fuck else
             {
-                Screen.SetResolution(selectedResolution.width, selectedResolution.height, fullscreenCheckbox.IsChecked);
-                resolutionConfirmed = true;
-                testOrConfirmButton.Label.Text = okText;
-                QualitySettings.SetQualityLevel(qualityList.SelectedIndex);
+                Resolution selectedResolution = availableResolutions[resolutionList.SelectedIndex];
+                if (!resolutionConfirmed)
+                {
+                    Screen.SetResolution(selectedResolution.width, selectedResolution.height, fullscreenCheckbox.IsChecked);
+                    resolutionConfirmed = true;
+                    testOrConfirmButton.Label.Text = okText;
+                    QualitySettings.SetQualityLevel(qualityList.SelectedIndex);
+                }
+                else
+                {
+                    DaggerfallUnity.Settings.ResolutionWidth = selectedResolution.width;
+                    DaggerfallUnity.Settings.ResolutionHeight = selectedResolution.height;
+                    DaggerfallUnity.Settings.Fullscreen = fullscreenCheckbox.IsChecked;
+                    DaggerfallUnity.Settings.QualityLevel = qualityList.SelectedIndex;
+                    moveNextStage = true;
+                }
             }
-            else
+            catch (IndexOutOfRangeException ex)
             {
-                DaggerfallUnity.Settings.ResolutionWidth = selectedResolution.width;
-                DaggerfallUnity.Settings.ResolutionHeight = selectedResolution.height;
-                DaggerfallUnity.Settings.Fullscreen = fullscreenCheckbox.IsChecked;
-                DaggerfallUnity.Settings.QualityLevel = qualityList.SelectedIndex;
-                moveNextStage = true;
+                Debug.LogWarning(ex.Message);
             }
         }
 

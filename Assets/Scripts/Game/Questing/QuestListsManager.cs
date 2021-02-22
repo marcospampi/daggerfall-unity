@@ -101,7 +101,7 @@ namespace DaggerfallWorkshop.Game.Questing
         /// </summary>
         public string QuestPacksFolder
         {
-            get { return Path.Combine(Application.streamingAssetsPath, QuestPacksFolderName); }
+            get { return Path.Combine(Paths.StreamingAssetsPath, QuestPacksFolderName); }
         }
 
         public void DiscoverQuestPackLists()

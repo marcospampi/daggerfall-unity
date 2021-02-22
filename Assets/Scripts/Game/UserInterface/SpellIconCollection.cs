@@ -228,7 +228,7 @@ namespace DaggerfallWorkshop.Game.UserInterface
         void LoadSpellIconPacks()
         {
             // Start with all the atlases in the spell icons streaming assets path
-            string sourcePath = Path.Combine(Application.streamingAssetsPath, sourceFolderName);
+            string sourcePath = Path.Combine(Paths.StreamingAssetsPath, sourceFolderName);
             string[] atlasPaths = Directory.GetFiles(sourcePath, "*.png");
             if (atlasPaths != null && atlasPaths.Length != 0)
             {

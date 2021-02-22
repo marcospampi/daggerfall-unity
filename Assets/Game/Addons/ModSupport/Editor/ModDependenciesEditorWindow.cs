@@ -67,7 +67,7 @@ namespace DaggerfallWorkshop.Game.Utility.ModSupport
             addDependencyContent = new GUIContent("Add Dependency", EditorGUIUtility.IconContent("CreateAddNew@2x").image);
             saveAndCloseContent = new GUIContent("Save and Close", EditorGUIUtility.IconContent("SaveAs@2x").image);
 
-            string[] files = Directory.GetFiles(Path.Combine(Application.dataPath, "StreamingAssets", "Mods"), "*.dfmod");
+            string[] files = Directory.GetFiles(Path.Combine(Paths.DataPath, "StreamingAssets", "Mods"), "*.dfmod");
             var availableMods = files.Select(x => Path.GetFileNameWithoutExtension(x)).ToList();
             availableMods.Add("<other>");
             this.availableMods = availableMods.ToArray();

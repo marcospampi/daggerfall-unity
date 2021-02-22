@@ -24,7 +24,7 @@ namespace DaggerfallWorkshop.Utility.AssetInjection
     {
         #region Fields & Properties
 
-        static readonly string soundPath = Path.Combine(Application.streamingAssetsPath, "Sound");
+        static readonly string soundPath = Path.Combine(Paths.StreamingAssetsPath, "Sound");
 
         /// <summary>
         /// Path to custom sounds and songs on disk.

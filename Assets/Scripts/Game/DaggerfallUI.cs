@@ -273,7 +273,7 @@ namespace DaggerfallWorkshop.Game
 
         public string FontsFolder
         {
-            get { return Path.Combine(Application.streamingAssetsPath, fontsFolderName); }
+            get { return Path.Combine(Paths.StreamingAssetsPath, fontsFolderName); }
         }
 
         public PaperDollRenderer PaperDollRenderer

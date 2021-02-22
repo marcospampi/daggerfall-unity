@@ -1,0 +1,37 @@
+2021/02/21 23:34:39.597 15605 15634 Error Unity Exception encountered in operation ChainOperation<IList`1> - InitializationOperation, status=Failed, result= : ChainOperation of Type: System.Collections.Generic.IList`1[UnityEngine.Localization.Locale] failed because dependent operation failed
+2021/02/21 23:34:39.597 15605 15634 Error Unity Exception of type 'UnityEngine.AddressableAssets.InvalidKeyException' was thrown., Key=Locale, Type=UnityEngine.Localization.Locale 
+2021/02/21 23:34:39.597 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.597 15605 15634 Error Unity 
+2021/02/21 23:34:39.629 15605 15634 Error Unity No Locale could be selected:
+2021/02/21 23:34:39.629 15605 15634 Error Unity No Locales were available. Did you build the Addressables?
+2021/02/21 23:34:39.629 15605 15634 Error Unity The following (3) IStartupLocaleSelectors were used:
+2021/02/21 23:34:39.629 15605 15634 Error Unity 	UnityEngine.Localization.Settings.CommandLineLocaleSelector
+2021/02/21 23:34:39.629 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SystemLocaleSelector
+2021/02/21 23:34:39.629 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SpecificLocaleSelector
+2021/02/21 23:34:39.629 15605 15634 Error Unity  
+2021/02/21 23:34:39.629 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.629 15605 15634 Error Unity 
+2021/02/21 23:34:39.649 15605 15634 Error Unity No Locale could be selected:
+2021/02/21 23:34:39.649 15605 15634 Error Unity No Locales were available. Did you build the Addressables?
+2021/02/21 23:34:39.649 15605 15634 Error Unity The following (3) IStartupLocaleSelectors were used:
+2021/02/21 23:34:39.649 15605 15634 Error Unity 	UnityEngine.Localization.Settings.CommandLineLocaleSelector
+2021/02/21 23:34:39.649 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SystemLocaleSelector
+2021/02/21 23:34:39.649 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SpecificLocaleSelector
+2021/02/21 23:34:39.649 15605 15634 Error Unity  
+2021/02/21 23:34:39.649 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.649 15605 15634 Error Unity 
+2021/02/21 23:34:39.649 15605 15634 Error Unity Can not preload when `LocalizationSettings.SelectedLocale` is null. 
+2021/02/21 23:34:39.649 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.649 15605 15634 Error Unity 
+2021/02/21 23:34:39.654 15605 15634 Error Unity No Locale could be selected:
+2021/02/21 23:34:39.654 15605 15634 Error Unity No Locales were available. Did you build the Addressables?
+2021/02/21 23:34:39.654 15605 15634 Error Unity The following (3) IStartupLocaleSelectors were used:
+2021/02/21 23:34:39.654 15605 15634 Error Unity 	UnityEngine.Localization.Settings.CommandLineLocaleSelector
+2021/02/21 23:34:39.654 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SystemLocaleSelector
+2021/02/21 23:34:39.654 15605 15634 Error Unity 	UnityEngine.Localization.Settings.SpecificLocaleSelector
+2021/02/21 23:34:39.654 15605 15634 Error Unity  
+2021/02/21 23:34:39.654 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.654 15605 15634 Error Unity 
+2021/02/21 23:34:39.654 15605 15634 Error Unity Can not preload when `LocalizationSettings.SelectedLocale` is null. 
+2021/02/21 23:34:39.654 15605 15634 Error Unity (Filename: ./Runtime/Export/Debug/Debug.bindings.h Line: 35)
+2021/02/21 23:34:39.654 15605 15634 Error Unity 
