@@ -117,6 +117,8 @@ namespace Wenzil.Console
 
             ConsoleCommandsDatabase.RegisterCommand(SummonDaedra.name, SummonDaedra.description, SummonDaedra.usage, SummonDaedra.Execute);
             ConsoleCommandsDatabase.RegisterCommand(ChangeModSettings.name, ChangeModSettings.description, ChangeModSettings.usage, ChangeModSettings.Execute);
+            ConsoleCommandsDatabase.RegisterCommand(SetDPIScaleCommand.name, SetDPIScaleCommand.description, SetDPIScaleCommand.usage, SetDPIScaleCommand.Execute);
+
         }
 
         private static class DumpRegion
@@ -2097,10 +2099,11 @@ namespace Wenzil.Console
                         foreach (WeaponMaterialTypes material in weaponMaterials)
                         {
                             Array enumArray = itemHelper.GetEnumArray(ItemGroups.Weapons);
-                            for (int i = 0; i < enumArray.Length-1; i++)
+                            for (int i = 0; i < enumArray.Length - 1; i++)
                             {
                                 newItem = ItemBuilder.CreateWeapon((Weapons)enumArray.GetValue(i), material);
-                                if (args[0] == "magicWeapons") {
+                                if (args[0] == "magicWeapons")
+                                {
                                     newItem.legacyMagic = new DaggerfallEnchantment[] { new DaggerfallEnchantment() { type = EnchantmentTypes.CastWhenUsed, param = 5 } };
                                     newItem.IdentifyItem();
                                 }
@@ -2726,5 +2729,31 @@ namespace Wenzil.Console
                 return false;
             }
         }
+        private static class SetDPIScaleCommand
+        {
+            public static readonly string name = "setdpiscale";
+            public static readonly string description = "Set DPI scale factor";
+            public static readonly string usage = "setdpiscale <value>";
+
+            public static string Execute(params string[] args)
+            {
+                try {
+                    float value = float.Parse(args[0], System.Globalization.CultureInfo.InvariantCulture );
+
+                    if ( value <= 0 ) {
+                        throw new ArgumentOutOfRangeException("Value must be greater than 0");
+                    }
+
+                    QualitySettings.resolutionScalingFixedDPIFactor = value;
+                    return value.ToString();
+                }
+
+                catch( Exception ex) {
+                    return ex.Message;
+                }
+                
+            }
+        }
+
     }
 }
